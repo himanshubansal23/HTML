@@ -1,0 +1,59 @@
+<html>
+<head>
+<script>
+function checkage()
+{
+var nam = document.forms["Voting"]["name"];
+var ag = document.forms["Voting"]["age"];
+var nat = document.forms["Voting"]["Nation"];
+if(nam.value == "")
+{
+window.alert("Please enter name");
+}
+if(ag.value == "")
+{
+window.alert("Please enter age");
+}
+if(nat.value == "Select")
+{
+window.alert("Please choose country");
+}
+if(ag.value >=18)
+{
+if(nat.value =="India")
+{
+window.alert("Eligible for voting");
+}
+else
+{
+window.alert("Stay Away Foreigners");
+}
+}
+else if(age<18)
+{
+window.alert("Oops! Not Eligible");
+}
+return true;
+}
+</script>
+</head>
+<body>
+<h1> <center> Check Eligibility for Voting </center> </h1>
+<form name="Voting" onsubmit="return checkage()">
+<fieldset>
+<br><center> Name : &nbsp<input type="text" id="nm" name="name"> 
+&nbsp &nbsp &nbsp Age : &nbsp<input type="numeric" id="ag" name="age"> 
+&nbsp &nbsp &nbsp Nationality : <select type="text" name="Nation">
+<option value="Select" selected disabled> Select </option>
+<option value="India"> India </option> 
+<option value="Nepal"> Nepal </option>
+<option value="Bangladesh"> Bangladesh </option>
+<option value="Sri Lanka"> Sri Lanka </option>
+<option value="USA"> USA </option>
+<option value="Australia"> Australia </option>
+<option value="Pakistan"> Pakistan </option>
+</select>	
+<p><center>  <input type="submit" value="Submit" name="submit"></p>
+</form>
+</body>
+</html>
